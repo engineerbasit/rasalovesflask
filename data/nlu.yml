@@ -1,0 +1,179 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hola
+    - hi
+    - hello there
+    - good morning
+    - Hey! Is anyone there?
+    - good evening
+    - Good day
+    - hey there
+    - let's go
+    - How are you
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - Have a nice day
+    - see you later
+
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you
+    - That's helpful
+    - Thanks for the help
+    - Thank's a lot!
+    - love you
+
+- intent: about
+  examples: |
+    - Who are you?
+    - What are you?
+    - Who you are
+    - Who am I talking to?
+    - who is there?
+    - what is your name
+    - what should I call you
+    - whats your name?
+    - Do you have any name?
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: service
+  examples: |
+    - What items do you have?
+    - What kinds of items are there?
+    - What do you sell?
+    - What do you serve?
+    - What do you have for lunch?
+
+- intent: menu
+  examples: |
+    - what is on the list?
+    - What is availible
+    - Tell me the menu
+    - Do you have any deals?
+    - What is in the menu
+    - Are there any deals?
+    - Tell me some deals.
+    - What is availible
+    - Do you have pizza?
+    - Where can I find pizza?
+    - I would like to order pizaa.
+    - I want pizza.
+
+- intent: payments
+  examples: |
+    - Do you take credit cards?
+    - Do you accept Mastercard?
+    - Can I pay with Paypal?
+    - Are you cash only?
+    - How can I pay you?
+
+
+- intent: delivery
+  examples: |
+    - When will I get my order?
+    - How long does delivery take?
+    - When do I get my delivery?
+    - When will my food arrive
+    - How do you deliever?
+
+- intent: funny
+  examples: |
+    - Tell me a joke!
+    - Tell me something funny!
+    - Do you know a joke?
+
+- intent: complain
+  examples: |
+    - I have a complain.
+    - Where can I complain?
+    - How I register my complain
+
+- intent: servicetime
+  examples: |
+    - Is your shop open now?
+    - When will you close
+    - which time do you serve?
+    - when will it close?
+    - Is this shop still open?
+    - Are you serving now?
+    - How late are you open today
+    - How early do you open tomorrow
+
+- intent: veg
+  examples: |
+    - Do you have vegetarian food?
+    - Do you serve vagan food?
+    - Can I have gluten free food
+    - I am vegetarian
+    - I eat only vegetarian food
+
+- intent: halal
+  examples: |
+    - Do you have Halal food?
+    - Can I have halal food?
+    - Do you serve muslims.
+
+- intent: changeorder
+  examples: |
+    - Can I change make change in the order?
+    - How can I cancel this order?
+    - I need to change my order
+    - I want to cancel my order?
+    
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+  
+- intent: user_name
+  examples: |
+    - My name is [Baber Ali](name)
+    - I am [Abdul Basit](name)
+    - You can call me [Asad Majeed](name)
+    - Hi, I am [Junaid Jamshed](name)
+    - [James Bond](name)
+
+- intent: contact_no
+  examples: |
+    - My number is [03461325159](contact)
+    - My number is [03461325159](contact).
+    - [03082763460](contact)
+    -  My mobile number is [04830093845](contact).

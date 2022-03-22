@@ -1,0 +1,131 @@
+version: "3.0"
+
+stories:
+
+# - story: Show menu
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: menu
+#   - action: utter_menu
+
+- story: service time order
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: servicetime
+  - action: utter_servicetime
+  ## add action here where bot asks customer about the order
+  - action : utter_want_order
+  - intent : affirm
+  - action : utter_affirm
+  - action : utter_menu
+
+- story: service time no order
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: servicetime
+  - action: utter_servicetime
+  ## add action here where bot asks customer about the order
+  - action : utter_want_order
+  - intent : deny
+  - action : utter_deny
+
+- story: service with menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: service
+  - action: utter_service
+  - action : utter_want_order
+  - intent : affirm
+  - action : utter_menu
+
+- story: service without menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: service
+  - action: utter_service
+  - action : utter_want_order
+  - intent : deny
+  - action : utter_deny
+
+- story: show menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: menu
+  - action: utter_menu
+  - action : utter_want_order
+  - intent : affirm
+  - action : utter_thanks
+
+# - story: bot info
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: about
+#   - action: utter_about
+#   - intent: thanks
+#   - action: utter_thanks
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+- story: payments methods
+  steps:
+  - intent: payments
+  - action: utter_payments
+
+- story: delievery time
+  steps:
+  - intent : delivery
+  - action: utter_delivery
+
+- story: Tell me joke
+  steps:
+  - intent : funny
+  - action : utter_funny
+
+- story: Register complain
+  steps:
+  - intent : complain
+  - action : utter_complain 
+
+- story: vegetarian
+  steps:
+  - intent : veg
+  - action : utter_veg
+
+- story: Halal Food
+  steps:
+  - intent : halal
+  - action : utter_halal
+
+- story: Changer Order
+  steps : 
+  - intent : changeorder
+  - action : utter_changeorder
+
+
+## Ask contact user contact info 
+- story: bot info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about
+  - action: utter_about
+  - action: utter_user_name
+  - intent: user_name
+    entities:
+    - name
+  - action: utter_contact_no
+  - intent: contact_no
+    entities:
+    - contact
+  - action: utter_thanks_note
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: utter_goodbye

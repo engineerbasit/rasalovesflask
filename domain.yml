@@ -1,0 +1,140 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - about
+  - service
+  - menu
+  - payments
+  - delivery
+  - funny
+  - complain
+  - servicetime
+  - veg
+  - halal
+  - changeorder
+  - affirm
+  - deny
+  - user_name
+  - contact_no
+
+### Adding entitites details
+entities:
+  - name
+  - contact
+  - email
+
+slots:
+  name:
+    type: text
+    mappings:
+    - type : from_entity
+      entity : name
+  contact:
+    type: any
+    mappings:
+    - type : from_entity
+      entity : contact
+  email:
+    type: text
+    mappings:
+    - type : from_entity
+      entity : email
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hi there"
+  - text: "Hello, thanks for visiting"
+  - text: "Hi there, what can I do for you?"
+  - text: "Hi there, how can I help?"
+
+  utter_goodbye:
+  - text: "See you later"
+  - text: "Have a nice day"
+  - text: "Bye! Come back again"
+  - text: "See you later, thanks for visiting"
+  - text: "Have a nice day"
+  - text: "Bye! Come back again soon."
+
+  utter_thanks:
+  - text: "Happy to help!"
+  - text: "Any time!"
+  - text: "My pleasure" 
+  - text: "You're most welcome!"
+  - text: "Happy to see you come again" 
+
+  utter_about:
+  - text : "I.m Joana, your bot assistant"
+  - text : "I'm Joana, an Artificial Intelligent bot"
+  - text : "You can call me Joana."
+  - text : "I'm Joana!"
+  - text : "Just call me as Joana"
+
+  utter_service:
+  - text : "We serve Fast Food."
+  - text : "We sell pizza and other Fast Food items" 
+
+  utter_menu:
+  - text : "We are having following deals Deal1. large Pizza with chicken 3 wings and cold drink Deal2. Medium pizza with broast and cold drink Deal3. Small pizza with cold drink"
+
+  
+  utter_payments:
+  - text : "We accept VISA, Mastercard and Paypal"
+  - text : "We accept most major credit cards, and Paypal"
+
+  utter_delivery:
+  - text : "Will deliever within 30 minutes!"
+  - text : "We will be at your door within 30 minutes."
+  - text : "The delievery will take 30 minutes after the order placement"
+
+  utter_funny:
+  - text : Why did the hipster burn his mouth? He drank the coffee before it was cool.
+  - text : What did the buffalo say when his son left for college? Bison.
+  - text : "Hear about the new restaurant called Karma? There is no menu: You get what you deserve."
+  - text : Did you hear about the claustrophobic astronaut? He just needed a little space.
+
+  utter_complain:
+  - text : Please visit our website and register your there.
+  - text : Go to www.abcPizza.com and register your complain.
+
+  utter_servicetime:
+  - text : We serve from 12pm to 12am
+  - text : Our service time is 12pm to 12am.
+  - text : We don't server after 12am.
+
+  utter_veg:
+  - text : Yes we do cook seperate food for vegan and also gluten free food.
+
+  utter_halal:
+  - text : Yes, we have halal foods.
+  - text : Yes we also serve halal food for muslims.
+
+  utter_changeorder:
+  - text : We accept changes or order cancellation in 15 minutes.
+  - text : You can make changes or cancel your order within 15 minutes.
+
+  utter_want_order:
+  - text : Do you wanna order something?
+
+  utter_affirm:
+  - text : Here is something you may like.
+
+  utter_deny:
+  - text : Right! What else can I do for you?
+
+  utter_user_name:
+  - text : "What is your name:"
+
+  utter_contact_no:
+  - text : What is your contact number
+
+  utter_thanks_note:
+  - text : You are welcome { name }.
+ 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
