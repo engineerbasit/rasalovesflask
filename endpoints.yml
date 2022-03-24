@@ -12,7 +12,7 @@
 
 # Configration for enabling bot inside web page
 action_endpoint:
- url: "http://localhost:5055/webhook"
+ url: "https://rasaflask.herokuapp.com/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
