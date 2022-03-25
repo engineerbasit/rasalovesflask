@@ -21,4 +21,5 @@ def extract():
   result=resp
   return render_template('index.html', result=result,text=text)
 if __name__ == "__main__":
-  app.run(debug=True)
+  p = int(os.environ.get("PORT", 5000))
+  app.run(debug=True, port=p, host='0.0.0.0')
