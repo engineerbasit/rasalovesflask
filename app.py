@@ -10,7 +10,7 @@ def extract():
   text=str(request.form.get('value1'))
   payload = json.dumps({"sender": "Rasa","message": text})
   headers = {'Content-type': 'application/json', 'Accept':     'text/plain'}
-  response = requests.request("POST",   url="https://rasaflask.herokuapp.com:5005/webhooks/rest/webhook", headers=headers, data=payload)
+  response = requests.request("POST",   url="https://rasaflask.herokuapp.com/webhooks/rest/webhook", headers=headers, data=payload)
   response=response.json()
   resp=[]
   for i in range(len(response)):
